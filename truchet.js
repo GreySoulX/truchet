@@ -1,12 +1,10 @@
-let dX = 1500;     // Canvas Size
-let dY = 1100;     //
-let t = 10;       //tile size 
-let Hlim = dX/t;  // Number of Horizontal tiles
-let Vlim = dY/t;  // Number of Veritcal tiles
-let bb = 0;       // Initiate coin tosser for no reason!
+let t = 10;                     // Tile size
+let [dX, dY] = [300,600];       // Canvas Size (Width x Height in pixels)
+let b = 40;                     // Border size
+let [Hlim,Vlim] = [dX/t,dY/t];  // Tile limiter
 
 function setup() {
-  createCanvas(dX+40,dY+40, SVG);
+  createCanvas(dX+b,dY+b);
   background(255);
   stroke(0);
   strokeWeight(1);
@@ -16,7 +14,7 @@ function setup() {
 
 function truchet() {
   for(let i = 0; i < Hlim; i++){
-    bb = floor(random(1,3));
+    let bb = floor(random(2));
     if(bb==1){
       arc(0, 0, t, t, 0, 90 );
       arc(t, t, t, t, 180, 270 );
