@@ -3,7 +3,7 @@ let dY = 1100;     //
 let t = 10;       //tile size 
 let Hlim = dX/t;  // Number of Horizontal tiles
 let Vlim = dY/t;  // Number of Veritcal tiles
-let bb = 0;       // Initiate coin tosser
+let bb = 0;       // Initiate coin tosser for no reason!
 
 function setup() {
   createCanvas(dX+40,dY+40, SVG);
@@ -11,8 +11,7 @@ function setup() {
   stroke(0);
   strokeWeight(1);
   noFill();
-  angleMode(DEGREES);
-   
+  angleMode(DEGREES);   
 }
 
 function truchet() {
